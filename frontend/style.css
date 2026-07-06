@@ -1,0 +1,673 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #0F172A,
+        #1E293B,
+        #0F172A
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    radial-gradient(circle at top left,#3B82F620,transparent 40%),
+
+    radial-gradient(circle at bottom right,#10B98120,transparent 40%);
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    text-align:center;
+
+    padding:60px 20px 30px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.upload-card,
+.preview-card,
+.result-card{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.upload-card h2,
+.preview-card h2,
+.result-card h2{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+/* ==========================================
+   DROP AREA
+========================================== */
+
+.drop-area{
+
+    border:2px dashed #3B82F6;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.drop-area:hover{
+
+    background:rgba(59,130,246,.08);
+
+}
+
+.upload-icon{
+
+    font-size:60px;
+
+    color:#60A5FA;
+
+    margin-bottom:20px;
+
+}
+
+.drop-area h3{
+
+    margin-bottom:10px;
+
+}
+
+.drop-area p{
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#3B82F6;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:#2563EB;
+
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+
+}
+
+/* ==========================================
+   PREDICT BUTTON
+========================================== */
+
+#predictBtn{
+
+    width:220px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   IMAGE PREVIEW
+========================================== */
+
+#previewImage{
+
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+    display:none;
+
+}
+
+/* ==========================================
+   RESULT CARD
+========================================== */
+
+.result-card{
+
+    display:none;
+
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.loading p{
+
+    margin-top:15px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#94A3B8;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.container{
+
+    width:95%;
+
+}
+
+.drop-area{
+
+    padding:25px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================
+   PREDICTION HEADER
+========================================== */
+
+.prediction-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.prediction-box{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.prediction-box h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#60A5FA;
+
+    margin-bottom:10px;
+
+}
+
+.prediction-box h3{
+
+    color:#CBD5E1;
+
+    font-weight:400;
+
+}
+
+/* ==========================================
+   CONFIDENCE BAR
+========================================== */
+
+.confidence-section{
+
+    margin-top:25px;
+
+}
+
+.confidence-section h3{
+
+    margin-bottom:15px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:20px;
+
+    background:#334155;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        #22C55E,
+        #3B82F6
+    );
+
+    transition:width 1s ease;
+
+}
+
+/* ==========================================
+   TOP PREDICTIONS
+========================================== */
+
+.top-predictions{
+
+    margin-top:35px;
+
+}
+
+.top-predictions h3{
+
+    margin-bottom:15px;
+
+}
+
+.prediction-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.05);
+
+    transition:.3s;
+
+}
+
+.prediction-item:hover{
+
+    transform:translateX(6px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/* ==========================================
+   MODEL INFO
+========================================== */
+
+.model-info{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.info-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.info-card h4{
+
+    color:#94A3B8;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+
+}
+
+.info-card p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   LOADING SPINNER
+========================================== */
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid #3B82F6;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+0%{
+
+    transform:rotate(0deg);
+
+}
+
+100%{
+
+    transform:rotate(360deg);
+
+}
+
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+.fade-in{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   DROP AREA ACTIVE
+========================================== */
+
+.drop-area.dragover{
+
+    border-color:#22C55E;
+
+    background:rgba(34,197,94,.10);
+
+}
+
+/* ==========================================
+   SCROLL BAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#2563EB;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.model-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.prediction-box h1{
+
+    font-size:36px;
+
+}
+
+.info-card{
+
+    padding:16px;
+
+}
+
+}
+
+/* ==========================================
+   LARGE SCREEN
+========================================== */
+
+@media(min-width:1200px){
+
+.container{
+
+    max-width:1000px;
+
+}
+
+}
