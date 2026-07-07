@@ -7,7 +7,7 @@ app = FastAPI(title="Cats vs Dogs AI API",description="ResNet18 Image Classifica
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://catsvsdogsai-1.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
