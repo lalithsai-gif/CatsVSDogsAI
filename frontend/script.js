@@ -35,8 +35,7 @@ const inferenceTime = document.getElementById("inferenceTime");
 // Local
 // const API_URL = "http://127.0.0.1:8000";
 
-// Render
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://grafterlalith-cats-vs-dogs-ai.hf.space";
 
 // ==============================
 // BROWSE BUTTON
